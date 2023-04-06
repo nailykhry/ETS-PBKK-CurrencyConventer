@@ -1,12 +1,9 @@
-using System;
-using System.Windows.Forms;
-using Currency_Conventer___ETS_PBKK = Currency_Conventer___ETS_PBKK.Form1;
-
+using CurrencyConverter = Currency_Conventer___ETS_PBKK.CurrencyConverter;
 namespace Currency_Conventer___ETS_PBKK
 {
     public partial class Form1 : Form
     {
-        CurrencyConventer currencyConventer;
+        CurrencyConverter currencyConverter;
         public Form1()
         {
             InitializeComponent();
@@ -30,7 +27,34 @@ namespace Currency_Conventer___ETS_PBKK
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            Dictionary<string, string> symbolData = currencyConverter.getSymbols();
+            cmbFromCurrency.Items.Clear();
+            cmbToCurrency.Items.Clear();
 
+            cmbFromCurrency.DataSource = new BindingSource(symbolData, null);
+            cmbFromCurrency.DisplayMember = "Value";
+            cmbFromCurrency.ValueMember = "Key";
+
+
+            cmbToCurrency.DataSource = new BindingSource(symbolData, null);
+            cmbToCurrency.DisplayMember = "Value";
+            cmbToCurrency.ValueMember = "Key";
+
+
+            if (symbolData.Keys.Count > 1)
+            {
+                cmbFromCurrency.SelectedIndex = 0;
+                cmbToCurrency.SelectedIndex = 1;
+            }
+        }
+
+        private void convertBtn_Click(object sender, EventArgs e)
+        {
+            string fromCurrencySymbol = ((KeyValuePair<string, string>)cmbFromCurrency.SelectedItem).Key;
+            string toCurrencySymbol = ((KeyValuePair<string, string>)cmbToCurrency.SelectedItem).Key;
+            double currencyAmount = double.Parse(txtFromCurrency.Text);
+            double finalValue = currencyConverter.Convert(fromCurrencySymbol, toCurrencySymbol, currencyAmount);
+            txtToCurrency.Text = finalValue.ToString();
         }
     }
 }

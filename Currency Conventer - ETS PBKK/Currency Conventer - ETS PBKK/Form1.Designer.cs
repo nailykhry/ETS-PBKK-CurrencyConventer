@@ -31,11 +31,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.convertBtn = new System.Windows.Forms.Button();
+            this.cmbToCurrency = new System.Windows.Forms.ComboBox();
+            this.cmbFromCurrency = new System.Windows.Forms.ComboBox();
+            this.txtToCurrency = new System.Windows.Forms.TextBox();
+            this.txtFromCurrency = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -56,7 +56,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(235)))), ((int)(((byte)(221)))));
-            this.label1.Location = new System.Drawing.Point(38, 31);
+            this.label1.Location = new System.Drawing.Point(137, 28);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(372, 48);
             this.label1.TabIndex = 2;
@@ -65,67 +65,68 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(235)))), ((int)(((byte)(221)))));
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.comboBox4);
-            this.panel1.Controls.Add(this.comboBox3);
-            this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.convertBtn);
+            this.panel1.Controls.Add(this.cmbToCurrency);
+            this.panel1.Controls.Add(this.cmbFromCurrency);
+            this.panel1.Controls.Add(this.txtToCurrency);
+            this.panel1.Controls.Add(this.txtFromCurrency);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Location = new System.Drawing.Point(48, 92);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(350, 270);
+            this.panel1.Size = new System.Drawing.Size(533, 270);
             this.panel1.TabIndex = 3;
             // 
-            // button1
+            // convertBtn
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button1.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(235)))), ((int)(((byte)(221)))));
-            this.button1.Location = new System.Drawing.Point(114, 203);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(112, 34);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Convert";
-            this.button1.UseVisualStyleBackColor = false;
+            this.convertBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.convertBtn.Font = new System.Drawing.Font("Tw Cen MT Condensed Extra Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.convertBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(235)))), ((int)(((byte)(221)))));
+            this.convertBtn.Location = new System.Drawing.Point(191, 205);
+            this.convertBtn.Name = "convertBtn";
+            this.convertBtn.Size = new System.Drawing.Size(112, 34);
+            this.convertBtn.TabIndex = 6;
+            this.convertBtn.Text = "Convert";
+            this.convertBtn.UseVisualStyleBackColor = false;
+            this.convertBtn.Click += new System.EventHandler(this.convertBtn_Click);
             // 
-            // comboBox4
+            // cmbToCurrency
             // 
-            this.comboBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(235)))), ((int)(((byte)(221)))));
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(190, 147);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(128, 33);
-            this.comboBox4.TabIndex = 5;
+            this.cmbToCurrency.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(235)))), ((int)(((byte)(221)))));
+            this.cmbToCurrency.FormattingEnabled = true;
+            this.cmbToCurrency.Location = new System.Drawing.Point(250, 147);
+            this.cmbToCurrency.Name = "cmbToCurrency";
+            this.cmbToCurrency.Size = new System.Drawing.Size(249, 33);
+            this.cmbToCurrency.TabIndex = 5;
             // 
-            // comboBox3
+            // cmbFromCurrency
             // 
-            this.comboBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(235)))), ((int)(((byte)(221)))));
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(190, 60);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(128, 33);
-            this.comboBox3.TabIndex = 4;
+            this.cmbFromCurrency.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(235)))), ((int)(((byte)(221)))));
+            this.cmbFromCurrency.FormattingEnabled = true;
+            this.cmbFromCurrency.Location = new System.Drawing.Point(250, 62);
+            this.cmbFromCurrency.Name = "cmbFromCurrency";
+            this.cmbFromCurrency.Size = new System.Drawing.Size(249, 33);
+            this.cmbFromCurrency.TabIndex = 4;
             // 
-            // textBox2
+            // txtToCurrency
             // 
-            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(235)))), ((int)(((byte)(221)))));
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox2.Location = new System.Drawing.Point(22, 149);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.PlaceholderText = "Input Number";
-            this.textBox2.Size = new System.Drawing.Size(150, 31);
-            this.textBox2.TabIndex = 3;
+            this.txtToCurrency.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(235)))), ((int)(((byte)(221)))));
+            this.txtToCurrency.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtToCurrency.Location = new System.Drawing.Point(22, 149);
+            this.txtToCurrency.Name = "txtToCurrency";
+            this.txtToCurrency.PlaceholderText = "Input Number";
+            this.txtToCurrency.Size = new System.Drawing.Size(204, 31);
+            this.txtToCurrency.TabIndex = 3;
             // 
-            // textBox1
+            // txtFromCurrency
             // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(235)))), ((int)(((byte)(221)))));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Location = new System.Drawing.Point(22, 62);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.PlaceholderText = "Input Number";
-            this.textBox1.Size = new System.Drawing.Size(150, 31);
-            this.textBox1.TabIndex = 2;
+            this.txtFromCurrency.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(235)))), ((int)(((byte)(221)))));
+            this.txtFromCurrency.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtFromCurrency.Location = new System.Drawing.Point(22, 62);
+            this.txtFromCurrency.Name = "txtFromCurrency";
+            this.txtFromCurrency.PlaceholderText = "Input Number";
+            this.txtFromCurrency.Size = new System.Drawing.Size(204, 31);
+            this.txtFromCurrency.TabIndex = 2;
             // 
             // label3
             // 
@@ -142,7 +143,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(99)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.ClientSize = new System.Drawing.Size(449, 408);
+            this.ClientSize = new System.Drawing.Size(638, 408);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
             this.Name = "Form1";
@@ -165,14 +166,14 @@
         private TextBox textBox7;
         private ComboBox comboBox1;
         private ComboBox comboBox2;
-        private Button button1;
+        private Button convertBtn;
         private Label label1;
         private Label label2;
         private Panel panel1;
-        private TextBox textBox2;
-        private TextBox textBox1;
+        private TextBox txtToCurrency;
+        private TextBox txtFromCurrency;
         private Label label3;
-        private ComboBox comboBox4;
-        private ComboBox comboBox3;
+        private ComboBox cmbToCurrency;
+        private ComboBox cmbFromCurrency;
     }
 }

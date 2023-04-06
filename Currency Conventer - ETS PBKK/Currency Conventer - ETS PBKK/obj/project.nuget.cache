@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "FydXxa8q1HcFUhVJYzqH/tZAJt6GjUBPjLfFqvsrhYoukS9tSYQaxySZhl7U45fdFcZK/tZKhHLqL4xCVWWOZw==",
+  "dgSpecHash": "uF5rOtxyipiBp/1nBaXVDgQBY9jJdLUaGzliIaXp/BX9roSTM+Dfo0MnLmPW1beY0tNTqDUwyGXaV3ysSS1JKQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\MSI USER\\OneDrive - Institut Teknologi Sepuluh Nopember\\Dokumen\\Semester 6\\PBKK\\ETS-PBKK\\Currency Conventer - ETS PBKK\\Currency Conventer - ETS PBKK\\Currency Conventer - ETS PBKK.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\MSI USER\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
+    "C:\\Users\\MSI USER\\.nuget\\packages\\restsharp\\110.1.0\\restsharp.110.1.0.nupkg.sha512",
+    "C:\\Users\\MSI USER\\.nuget\\packages\\system.text.encodings.web\\7.0.0\\system.text.encodings.web.7.0.0.nupkg.sha512",
+    "C:\\Users\\MSI USER\\.nuget\\packages\\system.text.json\\7.0.2\\system.text.json.7.0.2.nupkg.sha512"
+  ],
   "logs": []
 }
